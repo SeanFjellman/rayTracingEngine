@@ -1,3 +1,7 @@
 #!/usr/bin/env fish
 
-g++ -O3 main.cc -o raytracer; and ./raytracer
+g++ -O3 main.cc -o raytracer;
+ 
+and ./raytracer
+
+and python3 convertImage.py
