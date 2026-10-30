@@ -1,0 +1,13 @@
+"filename", "language", "C++", "comment", "blank", "total"
+"/home/Sean/Desktop/school/graphics/study/camera.h", "C++", 34, 23, 25, 82
+"/home/Sean/Desktop/school/graphics/study/color.h", "C++", 9, 1, 3, 13
+"/home/Sean/Desktop/school/graphics/study/hittable.h", "C++", 5, 0, 4, 9
+"/home/Sean/Desktop/school/graphics/study/hittable_list.h", "C++", 5, 11, 4, 20
+"/home/Sean/Desktop/school/graphics/study/load_texture.h", "C++", 156, 32, 47, 235
+"/home/Sean/Desktop/school/graphics/study/main.cc", "C++", 15, 74, 23, 112
+"/home/Sean/Desktop/school/graphics/study/material.h", "C++", 75, 9, 22, 106
+"/home/Sean/Desktop/school/graphics/study/rtweekend.h", "C++", -8, 8, 0, 0
+"/home/Sean/Desktop/school/graphics/study/sphere.h", "C++", 5, 1, 0, 6
+"/home/Sean/Desktop/school/graphics/study/triangle.h", "C++", 9, 11, 8, 28
+"/home/Sean/Desktop/school/graphics/study/vec3.h", "C++", 71, 2, 14, 87
+"Total", "-", 376, 172, 150, 698

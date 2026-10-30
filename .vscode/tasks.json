@@ -1,0 +1,31 @@
+{
+    "version": "2.0.0",
+    "tasks": [
+        {
+            "label": "Build Raytracer",
+            "type": "shell",
+            "command": "g++",
+            "args": [
+                "-std=c++17",
+                "${workspaceFolder}/main.cc",
+                "-o",
+                "${workspaceFolder}/raytracer"
+            ],
+            "group": {
+                "kind": "build",
+                "isDefault": true
+            },
+            "problemMatcher": ["$gcc"]
+        },
+        {
+            "label": "Render Raytracer",
+            "type": "shell",
+            "command": "./raytracer > image.ppm && xdg-open image.ppm",
+            "options": {
+                "cwd": "${workspaceFolder}"
+            },
+            "dependsOn": "Build Raytracer",
+            "problemMatcher": []
+        }
+    ]
+}

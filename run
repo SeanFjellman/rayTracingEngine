@@ -1,0 +1,3 @@
+#!/usr/bin/env fish
+
+g++ -O3 main.cc -o raytracer; and ./raytracer
