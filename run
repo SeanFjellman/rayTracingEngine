@@ -1,7 +1,39 @@
 #!/usr/bin/env fish
 
-g++ -O3 main.cc -o raytracer;
- 
-and ./raytracer
+# Ask if the current image should be archived
+read -P "Archive current image.png? (y/n): " answer
 
-and python3 convertImage.py
+if test (string lower -- "$answer") = "y" -o (string lower -- "$answer") = "yes"
+
+    if test -f image.png
+        # Create archive folder if needed
+        mkdir -p "archived Images"
+
+        # Generate a unique filename using the date and time
+        set filename "image_"(date +%Y-%m-%d_%H-%M-%S)".png"
+
+        # Move the old image into the archive
+        mv image.png "archived Images/$filename"
+
+        echo "Archived image as $filename"
+    else
+        echo "No existing image.png to archive."
+    end
+
+else
+    echo "Skipping archive. Current image will be overwritten."
+end
+
+# Compile ray tracer
+g++ -O3 main.cc -o raytracer
+or exit 1
+
+# Generate new PPM image
+./raytracer
+or exit 1
+
+# Convert PPM to PNG
+python3 convertImage.py
+or exit 1
+
+echo "New image.png generated successfully!"
